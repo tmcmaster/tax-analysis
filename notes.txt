@@ -1,0 +1,12 @@
+https://tradingeconomics.com/australia/wages
+
+average weekly wage:
+
+1980 = $200   => $10500 per year
+2018 = $1200  => $62900 per year
+
+pretty much a straight line.
+
+this is an average of $25 a week increase each year.
+therefore an average of $1300 a year increase each year.
+

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tax-rates>
+    <year from="2016" to="17">
+        <bracket from="0" to="18200" tax="0" rate="0"/>
+        <bracket from="18201" to="37000" tax="0" rate="0.19" over="18200"/>
+        <bracket from="37001" to="87000" tax="3572" rate="0.3025" over="37000"/>
+        <bracket from="87001" to="180000" tax="19822" rate="0.37" over="87000"/>
+        <bracket from="180001" to="1000000" tax="54232" rate="0.45" over="180000"/>
+    </year>
+    <year from="2015" to="16">
+        <bracket from="0" to="18200" tax="0" rate="0"/>
+        <bracket from="18201" to="37000" tax="0" rate="0.19" over="18200"/>
+        <bracket from="37001" to="80000" tax="3572" rate="0.325" over="37000"/>
+        <bracket from="80001" to="180000" tax="17547" rate="0.37" over="80000"/>
+        <bracket from="180001" to="1000000" tax="54547" rate="0.45" over="180000"/>
+    </year>
+    <year from="2014" to="15">
+        <bracket from="0" to="18200" tax="0" rate="0"/>
+        <bracket from="18201" to="37000" tax="0" rate="0.19" over="18200"/>
+        <bracket from="37001" to="80000" tax="3572" rate="0.325" over="37000"/>
+        <bracket from="80001" to="180000" tax="17547" rate="0.37" over="80000"/>
+        <bracket from="180001" to="1000000" tax="54547" rate="0.45" over="180000"/>
+    </year>
+    <year from="2013" to="14">
+        <bracket from="0" to="18200" tax="0" rate="0"/>
+        <bracket from="18201" to="37000" tax="0" rate="0.19" over="18200"/>
+        <bracket from="37001" to="80000" tax="3572" rate="0.325" over="37000"/>
+        <bracket from="80001" to="180000" tax="17547" rate="0.37" over="80000"/>
+        <bracket from="180001" to="1000000" tax="54547" rate="0.45" over="180000"/>
+    </year>
+    <year from="2012" to="13">
+        <bracket from="0" to="18200" tax="0" rate="0"/>
+        <bracket from="18201" to="37000" tax="0" rate="0.19" over="18200"/>
+        <bracket from="37001" to="80000" tax="3572" rate="0.325" over="37000"/>
+        <bracket from="80001" to="180000" tax="17547" rate="0.37" over="80000"/>
+        <bracket from="180001" to="1000000" tax="54547" rate="0.45" over="180000"/>
+    </year>
+    <year from="2011" to="12">
+        <bracket from="0" to="6000" tax="0" rate="0"/>
+        <bracket from="6001" to="37000" tax="0" rate="15c" over="6000"/>
+        <bracket from="37001" to="80000" tax="4650" rate="0.30" over="37000"/>
+        <bracket from="80001" to="180000" tax="17550" rate="0.37" over="80000"/>
+        <bracket from="180001" to="1000000" tax="54550" rate="0.45" over="180000"/>
+    </year>
+    <year from="2010" to="11">
+        <bracket from="1" to="6000" tax="0" rate="0"/>
+        <bracket from="6001" to="37000" tax="0" rate="0.15" over="6000"/>
+        <bracket from="37001" to="80000" tax="4650" rate="0.30" over="37000"/>
+        <bracket from="80001" to="180000" tax="17550" rate="0.37" over="80000"/>
+        <bracket from="180001" to="1000000" tax="54550" rate="0.45" over="180000"/>
+    </year>
+    <year from="2009" to="10">
+        <bracket from="1" to="6000" tax="0" rate="0"/>
+        <bracket from="6001" to="35000" tax="0" rate="15c" over="6000"/>
+        <bracket from="35001" to="80000" tax="4350" rate="0.30" over="35000"/>
+        <bracket from="80001" to="180000" tax="17850" rate="0.38" over="80000"/>
+        <bracket from="180001" to="1000000" tax="55850" rate="0.45" over="180000"/>
+    </year>
+    <year from="2008" to="09">
+        <bracket from="1" to="6000" tax="0" rate="0"/>
+        <bracket from="6001" to="34000" tax="0" rate="15c" over="6000"/>
+        <bracket from="34001" to="80000" tax="4200" rate="0.30" over="34000"/>
+        <bracket from="80001" to="180000" tax="18000" rate="0.40" over="80000"/>
+        <bracket from="180001" to="1000000" tax="58000" rate="0.45" over="180000"/>
+    </year>
+    <year from="2007" to="08">
+        <bracket from="1" to="6000" tax="0" rate="0"/>
+        <bracket from="6001" to="30000" tax="0" rate="0.15" over="6000"/>
+        <bracket from="30001" to="75000" tax="3600" rate="0.30" over="30000"/>
+        <bracket from="75001" to="150000" tax="17100" rate="0.40" over="75000"/>
+        <bracket from="150001" to="1000000" tax="47100" rate="0.45" over="150000"/>
+    </year>
+    <year from="2006" to="07">
+        <bracket from="0" to="6000" tax="0" rate="0"/>
+        <bracket from="6001" to="25000" tax="0" rate="0.15" over="6000"/>
+        <bracket from="25001" to="75000" tax="2850" rate="0.30" over="25000"/>
+        <bracket from="75001" to="150000" tax="17850" rate="0.40" over="75000"/>
+        <bracket from="150001" to="1000000" tax="47850" rate="0.45" over="150000"/>
+    </year>
+    <year from="2005" to="06">
+        <bracket from="0" to="6000" tax="0" rate="0"/>
+        <bracket from="6001" to="21600" tax="0" rate="0.15" over="6000"/>
+        <bracket from="21601" to="63000" tax="2340" rate="0.30" over="21600"/>
+        <bracket from="63001" to="95000" tax="14760" rate="0.42" over="63000"/>
+        <bracket from="Over 95000" tax="28200" rate="0.47" over="95000"/>
+    </year>
+    <year from="2004" to="05">
+        <bracket from="0" to="6000" tax="0" rate="0"/>
+        <bracket from="6001" to="21600" tax="0" rate="0.17" over="6000"/>
+        <bracket from="21601" to="58000" tax="2652" rate="0.30" over="21600"/>
+        <bracket from="58001" to="70000" tax="13572" rate="0.42" over="58000"/>
+        <bracket from="70000" to="1000000" tax="18612" rate="0.47" over="70000"/>
+    </year>
+    <year from="2003" to="04">
+        <bracket from="1" to="6000" tax="0" rate="0"/>
+        <bracket from="6001" to="21600" tax="0" rate="0.17" over="6000"/>
+        <bracket from="21601" to="52000" tax="2652" rate="0.30" over="21600"/>
+        <bracket from="52001" to="62500" tax="11772" rate="0.42" over="52000"/>
+        <bracket from="62501" to="1000000" tax="16182" rate="0.47" over="62500"/>
+    </year>
+    <year from="2002" to="03">
+        <bracket from="1" to="6000" tax="0" rate="0"/>
+        <bracket from="6001" to="20000" tax="0" rate="0.17" over="6000"/>
+        <bracket from="20001" to="50000" tax="2380" rate="0.30" over="20000"/>
+        <bracket from="50001" to="60000" tax="11380" rate="0.42" over="50000"/>
+        <bracket from="60001" to="1000000" tax="15580" rate="0.47" over="60000"/>
+    </year>
+    <year from="2001" to="02">
+        <bracket from="1" to="6000" tax="0" rate="0"/>
+        <bracket from="6001" to="20000" tax="0" rate="0.17" over="6000"/>
+        <bracket from="20001" to="50000" tax="2380" rate="0.30" over="20000"/>
+        <bracket from="50001" to="60000" tax="11380" rate="0.42" over="50000"/>
+        <bracket from="60001" to="1000000" tax="15580" rate="0.47" over="60000"/>
+    </year>
+    <year from="2000" to="01">
+        <bracket from="1" to="6000" tax="0" rate="0"/>
+        <bracket from="6001" to="20000" tax="0" rate="0.17" over="6000"/>
+        <bracket from="20001" to="50000" tax="2380" rate="0.30" over="20000"/>
+        <bracket from="50001" to="60000" tax="11380" rate="0.42" over="50000"/>
+        <bracket from="60001" to="1000000" tax="15580" rate="0.47" over="60000"/>
+    </year>
+    <year from="1999" to="2000">
+        <bracket from="1" to="5400" tax="0" rate="0"/>
+        <bracket from="5401" to="20700" tax="0" rate="0.20" over="5400"/>
+        <bracket from="20701" to="38000" tax="3060" rate="0.34" over="20700"/>
+        <bracket from="38001" to="50000" tax="8942" rate="0.43" over="38000"/>
+        <bracket from="50001" to="1000000" tax="14102" rate="0.47" over="50000"/>
+    </year>
+    <year from="1998" to="1999">
+        <bracket from="1" to="5400" tax="0" rate="0"/>
+        <bracket from="5401" to="20700" tax="0" rate="0.20" over="5400"/>
+        <bracket from="20701" to="38000" tax="3060" rate="0.34" over="20700"/>
+        <bracket from="38001" to="50000" tax="8942" rate="0.43" over="38000"/>
+        <bracket from="50001" to="1000000" tax="14102" rate="0.47" over="50000"/>
+    </year>
+    <year from="1997" to="1998">
+        <bracket from="1" to="5400" tax="0" rate="0"/>
+        <bracket from="5401" to="20700" tax="0" rate="0.20" over="5400"/>
+        <bracket from="20701" to="38000" tax="3060" rate="0.34" over="20700"/>
+        <bracket from="38001" to="50000" tax="8942" rate="0.43" over="38000"/>
+        <bracket from="50001" to="1000000" tax="14102" rate="0.47" over="50000"/>
+    </year>
+    <year from="1996" to="1997">
+        <bracket from="1" to="5400" tax="0" rate="0"/>
+        <bracket from="5401" to="20700" tax="0" rate="0.20" over="5400"/>
+        <bracket from="20701" to="38000" tax="3060" rate="0.34" over="20700"/>
+        <bracket from="38001" to="50000" tax="8942" rate="0.43" over="38000"/>
+        <bracket from="50001" to="1000000" tax="14102" rate="0.47" over="50000"/>
+    </year>
+    <year from="1995" to="1996">
+        <bracket from="1" to="5400" tax="0" rate="0"/>
+        <bracket from="5401" to="20700" tax="0" rate="0.20" over="5400"/>
+        <bracket from="20701" to="38000" tax="3060" rate="0.34" over="20700"/>
+        <bracket from="38001" to="50000" tax="8942" rate="0.43" over="38000"/>
+        <bracket from="50001" to="1000000" tax="14102" rate="0.47" over="50000"/>
+    </year>
+    <year from="1994" to="1995">
+        <bracket from="1" to="5400" tax="0" rate="0"/>
+        <bracket from="5401" to="20700" tax="0" rate="0.20" over="5400"/>
+        <bracket from="20701" to="38000" tax="3060" rate="0.34" over="20700"/>
+        <bracket from="38001" to="50000" tax="8942" rate="0.43" over="38000"/>
+        <bracket from="50001" to="1000000" tax="14102" rate="0.47" over="50000"/>
+    </year>
+    <year from="1993" to="1994">
+        <bracket from="1" to="5400" tax="0" rate="0"/>
+        <bracket from="5401" to="20700" tax="0" rate="0.20" over="5400"/>
+        <bracket from="20701" to="36000" tax="3060" rate="0.355" over="20700"/>
+        <bracket from="36001" to="38000" tax="8491.50" rate="0.385" over="36000"/>
+        <bracket from="38001" to="50000" tax="9261.50" rate="0.44125" over="38000"/>
+        <bracket from="50001" to="1000000" tax="14556.50" rate="0.47" over="50000"/>
+    </year>
+    <year from="1992" to="1993">
+        <bracket from="1" to="5400" tax="0" rate="0"/>
+        <bracket from="5401" to="20700" tax="0" rate="0.20" over="5400"/>
+        <bracket from="20701" to="36000" tax="3060" rate="0.38" over="20700"/>
+        <bracket from="36001" to="50000" tax="8874" rate="0.46" over="36000"/>
+        <bracket from="50001" to="1000000" tax="15314" rate="0.47" over="50000"/>
+    </year>
+    <year from="1991" to="1992">
+        <bracket from="1" to="5400" tax="0" rate="0"/>
+        <bracket from="5401" to="20700" tax="0" rate="0.20" over="5400"/>
+        <bracket from="20701" to="36000" tax="3060" rate="0.38" over="20700"/>
+        <bracket from="36001" to="50000" tax="8874" rate="0.46" over="36000"/>
+        <bracket from="50001" to="1000000" tax="15314" rate="0.47" over="50000"/>
+    </year>
+    <year from="1990" to="1991">
+        <bracket from="1" to="5249" tax="0" rate="0"/>
+        <bracket from="5250" to="17649" tax="0" rate="0.205" over="5250"/>
+        <bracket from="17650" to="20599" tax="2542" rate="0.245" over="17650"/>
+        <bracket from="20600" to="20699" tax="3264.75" rate="0.295" over="20600"/>
+        <bracket from="20700" to="34999" tax="3294.25" rate="0.385" over="20700"/>
+        <bracket from="35000" to="35999" tax="8799.75" rate="0.425" over="35000"/>
+        <bracket from="36000" to="49999" tax="9224.75" rate="0.465" over="36000"/>
+        <bracket from="50000" to="1000000" tax="15734.75" rate="0.47" over="50000"/>
+    </year>
+    <year from="1989" to="1990">
+        <bracket from="1" to="5099" tax="0" rate="0"/>
+        <bracket from="5100" to="17649" tax="0" rate="0.21" over="5100"/>
+        <bracket from="17650" to="20599" tax="2635.50" rate="0.29" over="17650"/>
+        <bracket from="20600" to="34999" tax="3491" rate="0.39" over="20600"/>
+        <bracket from="35000" to="49999" tax="9107" rate="0.47" over="35000"/>
+        <bracket from="50000" to="1000000" tax="16157" rate="0.48" over="50000"/>
+    </year>
+    <year from="1988" to="1989">
+        <bracket from="1" to="5100" tax="0" rate="0"/>
+        <bracket from="5101" to="12600" tax="0" rate="0.24" over="5100"/>
+        <bracket from="12601" to="19500" tax="1800" rate="0.29" over="12600"/>
+        <bracket from="19501" to="35000" tax="3801" rate="0.40" over="19500"/>
+        <bracket from="35001" to="1000000" tax="10001" rate="0.49" over="35000"/>
+    </year>
+    <year from="1987" to="1988">
+        <bracket from="1" to="5100" tax="0" rate="0"/>
+        <bracket from="5101" to="12600" tax="0" rate="0.24" over="5100"/>
+        <bracket from="12601" to="19500" tax="1800" rate="0.29" over="12600"/>
+        <bracket from="19501" to="35000" tax="3801" rate="0.40" over="19500"/>
+        <bracket from="35001" to="1000000" tax="10001" rate="0.49" over="35000"/>
+    </year>
+    <year from="1986" to="1987">
+        <bracket from="0" to="4889" tax="0" rate="0"/>
+        <bracket from="4890" to="12499" tax="0" rate="0.2442" over="4890"/>
+        <bracket from="12500" to="12599" tax="1858.36" rate="0.265" over="12500"/>
+        <bracket from="12600" to="19499" tax="1884.86" rate="0.2942" over="12600"/>
+        <bracket from="19500" to="27999" tax="3914.84" rate="0.4425" over="19500"/>
+        <bracket from="28000" to="34999" tax="7676.09" rate="0.4683" over="28000"/>
+        <bracket from="35000" to="1000000" tax="10954.19" rate="0.5708" over="35000"/>
+    </year>
+    <year from="1985" to="1986">
+        <bracket from="0" to="4594" tax="0" rate="0"/>
+        <bracket from="4595" to="12499" tax="0" rate="0.25" over="4595"/>
+        <bracket from="12500" to="19499" tax="1976.26" rate="0.30" over="12500"/>
+        <bracket from="19500" to="27999" tax="4076.25" rate="0.46" over="19500"/>
+        <bracket from="28000" to="34999" tax="7986.25" rate="0.48" over="28000"/>
+        <bracket from="35000" to="1000000" tax="11346.25" rate="0.6" over="35000"/>
+    </year>
+    <year from="1984" to="1985">
+        <bracket from="1" to="4594" tax="0" rate="0"/>
+        <bracket from="4595" to="12499" tax="0" rate="0.2667" over="4595"/>
+        <bracket from="12500" to="19499" tax="2108.26" rate="0.30" over="12500"/>
+        <bracket from="19500" to="27999" tax="4208.26" rate="0.46" over="19500"/>
+        <bracket from="28000" to="34999" tax="8118.26" rate="0.4733" over="28000"/>
+        <bracket from="35000" to="35787" tax="11431.36" rate="0.5533" over="35000"/>
+        <bracket from="35788" to="1000000" tax="11867.36" rate="0.6" over="35788"/>
+    </year>
+    <year from="1983" to="1984">
+        <bracket from="1" to="4594" tax="0" rate="0"/>
+        <bracket from="4595" to="19499" tax="0" rate="0.30" over="4595"/>
+        <bracket from="19500" to="35787" tax="4471.50" rate="0.46" over="19500"/>
+        <bracket from="35788" to="1000000" tax="11963.98" rate="0.6" over="35788"/>
+    </year>
+</tax-rates>
