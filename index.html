@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+
+    <script src="http://d3js.org/d3.v3.js" charset="utf-8"></script>
+
+    <script type="module">
+
+        import './src/tm-line-graph/tm-line-graph.js';
+
+        import {
+            loadData, findBracket, calculateTax,
+            getAverageWeeklyWage, createBracketByYearMap,
+            getAverageYearlyWage, getRatioToAverageWage,
+            createGovernmentByYearMap,
+            generateTaxData, generateWageTaxData,
+            createGraphData
+        } from './src/index.js';
+
+        loadData((data) => {
+            //console.log('RATES: ', data.rates);
+            //console.log('GOVERNMENTS: ', data.governments);
+            test(data);
+        });
+
+        function test(data) {
+            let bracketsByYear = createBracketByYearMap(data.rates);
+            //console.log('Brackets by Year: ', bracketsByYear);
+
+            let governmentByYearMap = createGovernmentByYearMap(data.governments);
+            //console.log('Governments by Year: ', governmentByYearMap);
+
+            let year = 2018;
+            //let wage = 4000;
+            let wage = 4500;
+            let salary = (wage * 52.4);
+            let ratio = getRatioToAverageWage(wage).toPrecision(2);
+
+            //console.log("Salary ration compared to average: ", ratio);
+            let brackets = bracketsByYear[year];
+            let bracket = findBracket(brackets, salary)
+            //console.log('Bracket: ', bracket);
+            //console.log('Tax: ', calculateTax(brackets, salary));
+
+            setTimeout(() => {
+
+                let result = generateTaxData(bracketsByYear, governmentByYearMap, wage);
+
+                // let result = Object.keys(bracketsByYear).sort()
+                //     .map(year => {
+                //         return {
+                //             year: parseInt(year),
+                //             brackets: bracketsByYear[year]
+                //         }
+                //     }).map(info => {
+                //         let localSalary = getAverageYearlyWage(info.year) * ratio;
+                //         let tax = parseInt(calculateTax(info.brackets, localSalary));
+                //         let percentTax = Math.ceil(tax / localSalary * 100);
+                //         let government = governmentByYearMap[info.year];
+                //         return {...info,
+                //             salary: localSalary,
+                //             tax: tax,
+                //             percentTax: percentTax,
+                //             party: government.party
+                //        }
+                //     });
+
+                //console.log('RESULT: ', result);
+
+                // let summary = result.map(r => {
+                //     return {
+                //         party:r.party,
+                //         tax:r.percentTax
+                //     }
+                // });
+                //
+                //
+                // console.log('Summary: ', summary);
+
+
+                let wageAmounts = [500, 750, 1000, 1500, 2000, 3000, 4000, 5000];
+                let xName = 'year';
+                let yObjs = wageAmounts.reduce((map,item) => {
+                    map['' + item] = {column: '' + item};
+                    return map;
+                }, {});
+                let axisLabels = {
+                    xAxis: 'Years',
+                    yAxis: 'Tax Percentage'
+                };
+                let wageData = generateWageTaxData(bracketsByYear, governmentByYearMap,
+                                wageAmounts);
+
+                //console.log('Wage Tax Data: ', wageData);
+
+                let graphData2 = createGraphData(wageData);
+                //console.log('Graph Data 2: ', graphData2);
+
+                let graphData = [
+                    {year: "1980", variableA: "23", variableB: "52", variableC: "45", variableD: "35"},
+                    {year: "1981", variableA: "25", variableB: "51", variableC: "56", variableD: "40"},
+                    {year: "1982", variableA: "28", variableB: "55", variableC: "39", variableD: "19"},
+                    {year: "1983", variableA: "34", variableB: "55", variableC: "21", variableD: "21"},
+                    {year: "1984", variableA: "29", variableB: "55", variableC: "47", variableD: "22"}
+                ];
+                //console.log('Graph Data 1: ', graphData);
+
+                let graph = document.getElementById('graph');
+                graph.setData(graphData2, xName, yObjs, axisLabels);
+            }, 2000);
+        }
+
+    </script>
+</head>
+<body>
+    <tm-line-graph id="graph"></tm-line-graph>
+</body>
+</html>

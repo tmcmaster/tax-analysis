@@ -1,0 +1,50 @@
+[
+    {
+        "from": "1983",
+        "to": "1992",
+        "leader": "Bob Hawke",
+        "party": "Labour"
+    },
+    {
+        "from": "1993",
+        "to": "1995",
+        "leader": "Paul Keating",
+        "party": "Labour"
+    },
+    {
+        "from": "1996",
+        "to": "2006",
+        "leader": "John Howard",
+        "party": "Liberal"
+    },
+    {
+        "from": "2007",
+        "to": "2009",
+        "leader": "Kevin Rud",
+        "party": "Labour"
+    },
+    {
+        "from": "2010",
+        "to": "2012",
+        "leader": "Julia Gillard",
+        "party": "Labour"
+    },
+    {
+        "from": "2013",
+        "to": "2015",
+        "leader": "Tony Abbott",
+        "party": "Liberal"
+    },
+    {
+        "from": "2016",
+        "to": "2018",
+        "leader": "Malcom Turnbull",
+        "party": "Liberal"
+    },
+    {
+        "from": "2019",
+        "to": "2020",
+        "leader": "Scott Morrison",
+        "party": "Liberal"
+    }
+]
