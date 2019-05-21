@@ -8,6 +8,8 @@
         "images/**/*"
     ],
     "extraDependencies": [
+        "node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"
+
     ],
     "lint": {
         "rules": ["polymer-2-hybrid"]

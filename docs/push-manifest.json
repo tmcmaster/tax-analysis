@@ -1,0 +1,8 @@
+{
+  "index.html": {
+    "node_modules/%40webcomponents/webcomponentsjs/webcomponents-loader.js": {
+      "type": "script",
+      "weight": 1
+    }
+  }
+}
