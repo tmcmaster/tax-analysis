@@ -178,13 +178,13 @@ export function addBackground(svgId, colors, x, y, w, h) {
 
 export function addGraph(title, image, colors, x, y, w, h) {
     let body = d3.select(document.body);
-    body.append('h1').text(title);
+    body.append('h2').text(title);
     let div = body.append('div').attr('class', 'image');
     div.append('img').attr('src', 'images/' + image);
     let svg = div.append('svg');
     colors.forEach((color, i) => {
         svg.append('rect')
-            .attr('stroke', 'grey')
+            .attr('stroke', 'none')
             .attr('x', x+i*w)
             .attr('y', y)
             .attr('fill-opacity', 0.3)

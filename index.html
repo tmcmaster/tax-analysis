@@ -139,18 +139,29 @@
             display: inline-block;
             width: 640px;
         }
+        .labour {
+            color: rgba(255, 0, 0, 0.5);
+        }
+        .liberal {
+            color: rgba(0, 0, 255, 0.5);
+        }
     </style>
 </head>
 <body>
-    <h1>Percentage of income paid in tax</h1>
+    <h1>Australian trends overlaid with party in power.</h1>
+
+    <ul>
+        <li class="labour">1983 - Labour - Bob Hawke</li>
+        <li class="liberal">1996 - Liberal - John Howard</li>
+        <li class="labour">2007 - Labour - Kevin Rudd</li>
+        <li class="liberal">2013 - Tony Abbott</li>
+    </ul>
+
+    <h2>Percentage of income paid in tax</h2>
     <tm-line-graph id="graph"></tm-line-graph>
 
-    <pre>
-        - 1983 - Labour - Bob Hawke
-        - 1996 - Liberal - John Howard
-        - 2007 - Labour - Kevin Rudd
-        - 2013 - Tony Abbott
-    </pre>
+
+
 <!--    <h1>Australian debt as a percentage of GDP</h1>-->
 <!--    <div class="image">-->
 <!--        <img src="images/aus-debt-vs-gdp.jpg"/>-->

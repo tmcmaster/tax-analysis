@@ -4,16 +4,10 @@ export class TmLineGraph extends LitElement {
 
     constructor() {
         super();
-        this.message = 'testing';
-
-
-
-
     }
 
     static get properties() {
         return {
-            message: { type: String },
             data: { type: Object }
         };
     }
@@ -27,8 +21,8 @@ export class TmLineGraph extends LitElement {
         return html`
             <style>
                 :host { 
-                    display: block; 
-                    width: 100%;
+                    display: inline-block; 
+                    //width: 100%;
                 }
                 span {
                     color: red;
@@ -145,8 +139,6 @@ export class TmLineGraph extends LitElement {
                 }
 
             </style>
-            
-            <span>${this.message}</span>
             
             <div class="chart-wrapper" id="main-div">
                 <div class="inner-wrapper" id="chart-wrapper"></div>

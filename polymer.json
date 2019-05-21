@@ -1,0 +1,19 @@
+{
+    "entrypoint": "index.html",
+    "fragments": [
+    ],
+    "sources": [
+        "src/**/*",
+        "data/**/*",
+        "images/**/*"
+    ],
+    "extraDependencies": [
+    ],
+    "lint": {
+        "rules": ["polymer-2-hybrid"]
+    },
+    "builds": [
+        { "preset": "es5-bundled" },
+        { "preset": "es6-unbundled" }
+    ]
+}
