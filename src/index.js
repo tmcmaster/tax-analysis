@@ -152,12 +152,44 @@ export function createGraphData(wageData) {
     return Object.values(graphData);
 }
 
-export function createGovernmentColorList(governmentByYearMap) {
-    let years = sequence(1983, 2018);
+export function createGovernmentColorList(governmentByYearMap, start, end) {
+    let years = sequence(start,end);
     return years
         .map(year => governmentByYearMap[year])
         .map(gov => gov.party)
         .map(party => {
             return (party === 'Labour' ? 'red' : 'blue');
         });
+}
+
+export function addBackground(svgId, colors, x, y, w, h) {
+    let svg = d3.select(document.getElementById(svgId));
+    colors.forEach((color, i) => {
+        svg.append('rect')
+            .attr('stroke', 'none')
+            .attr('x', x+i*w)
+            .attr('y', y)
+            .attr('fill-opacity', 0.3)
+            .attr('fill', color)
+            .attr('width', w)
+            .attr('height', h);
+    });
+}
+
+export function addGraph(title, image, colors, x, y, w, h) {
+    let body = d3.select(document.body);
+    body.append('h1').text(title);
+    let div = body.append('div').attr('class', 'image');
+    div.append('img').attr('src', 'images/' + image);
+    let svg = div.append('svg');
+    colors.forEach((color, i) => {
+        svg.append('rect')
+            .attr('stroke', 'grey')
+            .attr('x', x+i*w)
+            .attr('y', y)
+            .attr('fill-opacity', 0.3)
+            .attr('fill', color)
+            .attr('width', w)
+            .attr('height', h);
+    });
 }

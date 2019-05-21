@@ -312,7 +312,7 @@ export class TmLineGraph extends LitElement {
                 .append("g")
                     .attr("transform", "translate(" + chartObj.margin.left + "," + chartObj.margin.top + ")");
 
-            this.addBackground(chartObj.svg, colors);
+            this.addBackground(chartObj.svg, colors, 2, 0, 15, 430);
 
             // Draw Lines
             for (var y  in yObjs) {
@@ -381,18 +381,16 @@ export class TmLineGraph extends LitElement {
         return chartObj;
     }
 
-    addBackground(svg, colors) {
-
-        const yearWidth = 15;
+    addBackground(svg, colors, x, y, w, h) {
         colors.forEach((color, i) => {
             svg.append('rect')
                 .attr('stroke', 'none')
-                .attr('x', 2+i*yearWidth)
-                .attr('y', 0)
+                .attr('x', x+i*w)
+                .attr('y', y)
                 .attr('fill-opacity', 0.3)
                 .attr('fill', color)
-                .attr('width', yearWidth)
-                .attr('height', 430);
+                .attr('width', w)
+                .attr('height', h);
         });
     }
 

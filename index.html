@@ -12,18 +12,21 @@
 
         import './src/tm-line-graph/tm-line-graph.js';
 
+        // import('./src/tm-line-graph/tm-line-graph.js')
+        //     .then(() => {
+        //         console.log('Completed loading the tm-line-graph component.');
+        //     });
+
         import {
-            loadData, findBracket, calculateTax,
-            getAverageWeeklyWage, createBracketByYearMap,
-            getAverageYearlyWage, getRatioToAverageWage,
+            loadData, findBracket, createBracketByYearMap,
+            getRatioToAverageWage,
             createGovernmentByYearMap,
-            generateTaxData, generateWageTaxData,
-            createGraphData, createGovernmentColorList
+            generateWageTaxData,
+            createGraphData, createGovernmentColorList,
+            addGraph
         } from './src/index.js';
 
         loadData((data) => {
-            //console.log('RATES: ', data.rates);
-            //console.log('GOVERNMENTS: ', data.governments);
             test(data);
         });
 
@@ -31,11 +34,10 @@
             let bracketsByYear = createBracketByYearMap(data.rates);
             //console.log('Brackets by Year: ', bracketsByYear);
 
-            let governmentByYearMap = createGovernmentByYearMap(data.governments);
-            //console.log('Governments by Year: ', governmentByYearMap);
+            let governmentByYear = createGovernmentByYearMap(data.governments);
+            //console.log('Governments by Year: ', governmentByYeargovernmentByYear);
 
             let year = 2018;
-            //let wage = 4000;
             let wage = 4500;
             let salary = (wage * 52.4);
             let ratio = getRatioToAverageWage(wage).toPrecision(2);
@@ -48,39 +50,6 @@
 
             setTimeout(() => {
 
-                //let result = generateTaxData(bracketsByYear, governmentByYearMap, wage);
-
-                // let result = Object.keys(bracketsByYear).sort()
-                //     .map(year => {
-                //         return {
-                //             year: parseInt(year),
-                //             brackets: bracketsByYear[year]
-                //         }
-                //     }).map(info => {
-                //         let localSalary = getAverageYearlyWage(info.year) * ratio;
-                //         let tax = parseInt(calculateTax(info.brackets, localSalary));
-                //         let percentTax = Math.ceil(tax / localSalary * 100);
-                //         let government = governmentByYearMap[info.year];
-                //         return {...info,
-                //             salary: localSalary,
-                //             tax: tax,
-                //             percentTax: percentTax,
-                //             party: government.party
-                //        }
-                //     });
-
-                //console.log('RESULT: ', result);
-
-                // let summary = result.map(r => {
-                //     return {
-                //         party:r.party,
-                //         tax:r.percentTax
-                //     }
-                // });
-                //
-                //
-                // console.log('Summary: ', summary);
-
 
                 let wageAmounts = [500, 750, 1000, 1500, 2000, 3000, 4000, 5000];
                 let xName = 'year';
@@ -92,7 +61,7 @@
                     xAxis: 'Years',
                     yAxis: 'Tax Percentage'
                 };
-                let wageData = generateWageTaxData(bracketsByYear, governmentByYearMap,
+                let wageData = generateWageTaxData(bracketsByYear, governmentByYear,
                                 wageAmounts);
 
                 //console.log('Wage Tax Data: ', wageData);
@@ -100,19 +69,100 @@
                 let graphData2 = createGraphData(wageData);
                 //console.log('Graph Data 2: ', graphData2);
 
-                console.log('GOVERNMENTS: ', governmentByYearMap);
+                //console.log('GOVERNMENTS: ', governmentByYear);
 
                 //let colors = ['red','blue','red','blue','red','blue','red','blue','red','blue','red'];
-                let colors = createGovernmentColorList(governmentByYearMap);
+                let colors = createGovernmentColorList(governmentByYear, 1983, 2018);
 
                 let graph = document.getElementById('graph');
                 graph.setData(graphData2, xName, yObjs, axisLabels, colors);
+
+                let testColors = [
+                    'red','blue','green','orange','yellow',
+                    'red','blue','green','orange','yellow',
+                    'red','blue','green','orange','yellow',
+                    'red','blue','green','orange','yellow'
+                ];
+
+                function createColors(start,end) {
+                    return createGovernmentColorList(governmentByYear, start, end)
+                }
+
+                addGraph('Australia Government Budget', 'australia-government-budget.png',
+                    createColors(1971, 2016), 32, 0, 11.5, 240);
+
+                addGraph('Australia Home Ownership Rate', 'australia-home-ownership-rate.png',
+                    createColors(1968, 2016), 85, 0, 9.5, 240);
+
+                addGraph('Australia House Price Index QoQ', 'australia-housing-index.png',
+                    createColors(2004, 2018), 64, 0, 34, 240);
+
+                addGraph('Australia Interest Rate', 'australia-interest-rate.png',
+                    createColors(1991, 2018), 35, 0, 19.4, 240);
+
+                addGraph('Australia Inflation Rate', 'aus-inflation-cpi.png',
+                    createColors(1955, 2018), 60, 0, 8.2, 240);
+
+                addGraph('Australian debt as a percentage of GDP', 'aus-debt-vs-gdp.jpg',
+                    createColors(1970, 2019), 60, 0, 11, 200);
+
+                addGraph('Revenue and Expense as a percentage of GDP', 'aus-exp-income-vs-gdp.jpg',
+                    createColors(1996, 2018), 65, 0, 23, 200);
+
+                addGraph('Household debt relative to GDP', 'aus-households-debt-vs-gdp.png',
+                    createColors(1983, 2017), 90, 0, 13.5, 245);
+
+                addGraph('Australia Private Debt to GDP', 'australia-private-debt-to-gdp.png',
+                    createColors(1996, 2016), 50, 0, 24, 240);
             }, 2000);
         }
 
+
     </script>
+    <style>
+        div.image {
+            display: inline-block;
+            position: relative;
+        }
+        svg {
+            position: absolute;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+            width:100%;
+            height: 100%;
+        }
+
+        img {
+            //border: solid red 2px;
+            display: inline-block;
+            width: 640px;
+        }
+    </style>
 </head>
 <body>
+    <h1>Percentage of income paid in tax</h1>
     <tm-line-graph id="graph"></tm-line-graph>
+
+    <pre>
+        - 1983 - Labour - Bob Hawke
+        - 1996 - Liberal - John Howard
+        - 2007 - Labour - Kevin Rudd
+        - 2013 - Tony Abbott
+    </pre>
+<!--    <h1>Australian debt as a percentage of GDP</h1>-->
+<!--    <div class="image">-->
+<!--        <img src="images/aus-debt-vs-gdp.jpg"/>-->
+<!--        <svg id="svg1"></svg>-->
+<!--    </div>-->
+
+<!--    <h1>Revenue and Expense as a percentage of GDP</h1>-->
+<!--    <div class="image">-->
+<!--        <img src="images/aus-exp-income-vs-gdp.jpg"/>-->
+<!--        <svg id="svg2"></svg>-->
+<!--    </div>-->
+
+
 </body>
 </html>

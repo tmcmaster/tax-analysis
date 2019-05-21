@@ -1,5 +1,12 @@
 https://tradingeconomics.com/australia/wages
 
+Change of government dates:
+
+    - 1983 - Labour - Bob Hawke
+    - 1996 - Liberal - John Howard
+    - 2007 - Labour - Kevin Rudd
+    - 2013 - Tony Abbott
+
 average weekly wage:
 
 1980 = $200   => $10500 per year
@@ -25,3 +32,17 @@ australian debt:
 
 https://en.wikipedia.org/wiki/Australian_government_debt
 https://www.aph.gov.au/About_Parliament/Parliamentary_Departments/Parliamentary_Library/pubs/BriefingBook45p/DebtPosition
+
+
+employment:
+
+https://www.jobs.gov.au/annual-report-2016/analysis-trends-australian-labour-market
+
+
+household debt:
+
+https://tradingeconomics.com/australia/households-debt-to-gdp
+
+
+Australian forcasts:
+https://tradingeconomics.com/australia/forecast
