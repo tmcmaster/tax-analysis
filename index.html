@@ -18,7 +18,7 @@
             getAverageYearlyWage, getRatioToAverageWage,
             createGovernmentByYearMap,
             generateTaxData, generateWageTaxData,
-            createGraphData
+            createGraphData, createGovernmentColorList
         } from './src/index.js';
 
         loadData((data) => {
@@ -48,7 +48,7 @@
 
             setTimeout(() => {
 
-                let result = generateTaxData(bracketsByYear, governmentByYearMap, wage);
+                //let result = generateTaxData(bracketsByYear, governmentByYearMap, wage);
 
                 // let result = Object.keys(bracketsByYear).sort()
                 //     .map(year => {
@@ -100,17 +100,13 @@
                 let graphData2 = createGraphData(wageData);
                 //console.log('Graph Data 2: ', graphData2);
 
-                let graphData = [
-                    {year: "1980", variableA: "23", variableB: "52", variableC: "45", variableD: "35"},
-                    {year: "1981", variableA: "25", variableB: "51", variableC: "56", variableD: "40"},
-                    {year: "1982", variableA: "28", variableB: "55", variableC: "39", variableD: "19"},
-                    {year: "1983", variableA: "34", variableB: "55", variableC: "21", variableD: "21"},
-                    {year: "1984", variableA: "29", variableB: "55", variableC: "47", variableD: "22"}
-                ];
-                //console.log('Graph Data 1: ', graphData);
+                console.log('GOVERNMENTS: ', governmentByYearMap);
+
+                //let colors = ['red','blue','red','blue','red','blue','red','blue','red','blue','red'];
+                let colors = createGovernmentColorList(governmentByYearMap);
 
                 let graph = document.getElementById('graph');
-                graph.setData(graphData2, xName, yObjs, axisLabels);
+                graph.setData(graphData2, xName, yObjs, axisLabels, colors);
             }, 2000);
         }
 

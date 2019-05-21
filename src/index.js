@@ -151,3 +151,13 @@ export function createGraphData(wageData) {
 
     return Object.values(graphData);
 }
+
+export function createGovernmentColorList(governmentByYearMap) {
+    let years = sequence(1983, 2018);
+    return years
+        .map(year => governmentByYearMap[year])
+        .map(gov => gov.party)
+        .map(party => {
+            return (party === 'Labour' ? 'red' : 'blue');
+        });
+}

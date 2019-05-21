@@ -18,9 +18,9 @@ export class TmLineGraph extends LitElement {
         };
     }
 
-    setData(data, xName, yObjs, axisLabels) {
-        console.log('setData(): ', data, xName, yObjs, axisLabels);
-        this.buildGraph(data, xName, yObjs, axisLabels);
+    setData(data, xName, yObjs, axisLabels, colors) {
+        console.log('setData(): ', data, xName, yObjs, axisLabels, colors);
+        this.buildGraph(data, xName, yObjs, axisLabels, colors);
     }
 
     render() {
@@ -154,11 +154,11 @@ export class TmLineGraph extends LitElement {
         `;
     }
 
-    buildGraph(data, xName, yObjs, axisLabels) {
+    buildGraph(data, xName, yObjs, axisLabels, colors) {
         let mainDiv = this.shadowRoot.getElementById("main-div");
         let chartDiv = this.shadowRoot.getElementById("chart-wrapper");
 
-        let chart = this.makeLineChart(data, xName, yObjs, axisLabels);
+        let chart = this.makeLineChart(data, xName, yObjs, axisLabels, colors);
         // var chart = this.makeLineChart(data, 'year', {
         //     'Variable A': {column: 'variableA'},
         //     'Variable B': {column: 'variableB'},
@@ -169,9 +169,11 @@ export class TmLineGraph extends LitElement {
 
         chart.bind(mainDiv, chartDiv);
         chart.render();
+
+
     }
 
-    makeLineChart(dataset, xName, yObjs, axisLables) {
+    makeLineChart(dataset, xName, yObjs, axisLables, colors) {
         var chartObj = {};
         var color = d3.scale.category10();
         chartObj.xAxisLable = axisLables.xAxis;
@@ -297,7 +299,7 @@ export class TmLineGraph extends LitElement {
         };
 
 // Render the chart
-        chartObj.render = function () {
+        chartObj.render = () => {
 
             let width = chartObj.width + (chartObj.margin.left + chartObj.margin.right);
             let height = chartObj.height + (chartObj.margin.top + chartObj.margin.bottom);
@@ -309,6 +311,8 @@ export class TmLineGraph extends LitElement {
                 .attr("height", height)
                 .append("g")
                     .attr("transform", "translate(" + chartObj.margin.left + "," + chartObj.margin.top + ")");
+
+            this.addBackground(chartObj.svg, colors);
 
             // Draw Lines
             for (var y  in yObjs) {
@@ -336,7 +340,7 @@ export class TmLineGraph extends LitElement {
             }
 
             // Year label
-            focus.append("text").attr("class", "focus year").attr("x", 9).attr("y", 7);
+            focus.append("text").attr("class", "focus year").attr("x", 470).attr("y", 20);
             // Focus line
             focus.append("line").attr("class", "focus line").attr("y1", 0).attr("y2", chartObj.height);
 
@@ -377,6 +381,20 @@ export class TmLineGraph extends LitElement {
         return chartObj;
     }
 
+    addBackground(svg, colors) {
+
+        const yearWidth = 15;
+        colors.forEach((color, i) => {
+            svg.append('rect')
+                .attr('stroke', 'none')
+                .attr('x', 2+i*yearWidth)
+                .attr('y', 0)
+                .attr('fill-opacity', 0.3)
+                .attr('fill', color)
+                .attr('width', yearWidth)
+                .attr('height', 430);
+        });
+    }
 
 }
 
